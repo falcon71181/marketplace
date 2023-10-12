@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/base.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Marketplace</h1>
+        <p>Discover a wide range of products!</p>
+    </header>
+    <nav class="wrapper">
+        <a href="{{url_for('index')}}">HOME</a>
+        <a href="{{url_for('market')}}">MARKET</a>
+        <a href="{{url_for('about')}}">ABOUT</a>
+    </nav>
+    {% block content %}
+    {% endblock %}
+    <footer>
+        &copy; 2023 Your Marketplace. All rights reserved.
+    </footer>
+</body>
+</html>
