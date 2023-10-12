@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}
+    MARKET 
+{% endblock %}
+{% block content %}
+<div class="container">
+        
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Barcode</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+        <tbody>
+        {%for item in items%}
+
+        <tr class="product">
+            <td>{{item.name}}</td>
+            <td>{{item.barcode}}</td>
+            <td>{{item.price}}$</td>
+            <td>
+                <button>Add to Cart</button>
+                <button>More Info</button>
+                <button>Purchase this Item</button>
+            </td
+        </tr>
+
+        {%endfor%}
+        </tbody>
+        
+    </table>
+    
+</div>
+{% endblock %}
